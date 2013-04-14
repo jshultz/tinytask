@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  details: MyText
+  label: 1
+  priority: 1
+  startdate: 2013-04-14 14:21:05
+  enddate: 2013-04-14 14:21:05
+  project: 
+
+two:
+  name: MyString
+  details: MyText
+  label: 1
+  priority: 1
+  startdate: 2013-04-14 14:21:05
+  enddate: 2013-04-14 14:21:05
+  project: 

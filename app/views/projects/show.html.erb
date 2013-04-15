@@ -16,32 +16,10 @@
 </p>
 
 <h2>Tasks</h2>
-<% @project.tasks.each do |task| %>
-    <p><strong>Task Name:</strong>
-    <%= task.name %>
-    </p>
+<%= render @project.tasks %>
 
-    <p>
-      <strong>Details</strong>
-      <%= task.details %>
-    </p>
-    <% end %>
-
-<h2>Ass a task:</h2>
-<%= form_for([@project, @project.tasks.build]) do |f| %>
-
-    <div class="field">
-      <%= f.label :name %><Br/>
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :details %><br/>
-      <%= f.text_area :details %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-<% end %>
+<h2>Add a task:</h2>
+<%= render "tasks/form" %>
 
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

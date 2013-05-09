@@ -1,26 +1,28 @@
 <h1>Listing projects</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Details</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<section id="projects">
 
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.name %></td>
-    <td><%= project.title %></td>
-    <td><%= project.details %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <% @projects.each do |project| %>
+      <section class="project">
+
+        <p class="name"><span>Name: </span> <%= project.name %></p>
+        <p class="title"><span>Title: </span><%= project.title %></p>
+        <article>
+          <span>Details:</span> <%= project.details %>
+        </article>
+        <article>
+          <p>Meta:</p>
+          <%= link_to 'Show', project %>
+          <%= link_to 'Edit', edit_project_path(project) %>
+          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </article>
+
+      </section>
+
+  <% end %>
+
+</section>
+
 
 <br />
 

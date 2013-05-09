@@ -1,3 +1,16 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.project {
+  width: 150px;
+  margin: 10px;
+  float: left;
+  border: 1px solid #dedede;
+}
+

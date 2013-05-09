@@ -3,12 +3,16 @@
 <head>
   <title>Tiny Task</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :modernizr %>
   <%= csrf_meta_tags %>
 </head>
 <body style="background: #EEEEEE">
 
-<%= yield %>
+<div id="wrapper">
+  <%= yield %>
+</div>
 
+<%= javascript_include_tag "application" %>
+<script src="/assets/jquery.masonry.min.js"></script>
 </body>
 </html>

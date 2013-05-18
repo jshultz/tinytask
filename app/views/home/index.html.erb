@@ -1,5 +1,13 @@
 <h1>Home#index</h1>
-<p><%= link_to "My Projects", projects_path %></p>
+
+<% if user_signed_in? -%>
+    <p><%= link_to "My Projects", projects_path %></p>
+<% end -%>
+
+
+
+
+
 
 
 

@@ -20,7 +20,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem "modernizr-rails", "~> 2.6.2.1"
-
+  gem "colorbox-rails", "~> 0.0.14"
 
   gem "jquery-fileupload-rails"
 
@@ -31,6 +31,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# Adding security to application with devise
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

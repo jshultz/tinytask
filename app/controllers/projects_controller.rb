@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+
+  before_filter :authenticate_user!
+
   # GET /projects
   # GET /projects.json
   def index
@@ -41,6 +44,8 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(params[:project])
+    @project.user_id = current_user.id
+    # @picture.username = current_user.username # assuming the user model has a username field
 
     respond_to do |format|
       if @project.save

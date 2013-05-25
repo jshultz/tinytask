@@ -1,0 +1,2 @@
+parent.jQuery('#cboxClose').click();
+window.parent.$("#projects").append("<%= escape_javascript render(:partial => 'projects/project', :locals => { :project => @project }) %>").masonry('reload');

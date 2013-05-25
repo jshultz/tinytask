@@ -3,22 +3,8 @@
 <section id="projects">
 
   <% @projects.each do |project| %>
-      <section class="project">
 
-        <p class="name"><span>Name: </span> <%= project.name %></p>
-        <p class="title"><span>Title: </span><%= project.title %></p>
-        <p class="title"><span>User ID: </span><%= project.user_id %></p>
-        <article>
-          <span>Details:</span> <%= project.details %>
-        </article>
-        <article>
-          <p>Meta:</p>
-          <%= link_to 'Show', project %>
-          <%= link_to 'Edit', edit_project_path(project) %>
-          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </article>
-
-      </section>
+      <%= render :partial => "project", :object  => project %>
 
   <% end %>
 

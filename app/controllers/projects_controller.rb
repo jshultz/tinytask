@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.where("user_id = ?", current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +16,12 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @project = Project.find(params[:id])
+    # @project = Project.find(params[:id])
+
+    user_id = current_user.id
+
+    @project = Project.where("id = ? AND user_id = ?", params[:id], user_id).first
+
 
     respond_to do |format|
       format.html # show.html.erb
@@ -37,7 +42,12 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    @project = Project.find(params[:id])
+    #@project = Project.find(params[:id])
+
+    user_id = current_user.id
+
+    @project = Project.where("id = ? AND user_id = ?", params[:id], user_id).first
+
   end
 
   # POST /projects
@@ -45,12 +55,14 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(params[:project])
     @project.user_id = current_user.id
-    # @picture.username = current_user.username # assuming the user model has a username field
 
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render json: @project, status: :created, location: @project }
+        #format.json { render json: @project, status: :created, location: @project }
+        format.js {} #render create.js.erb
+        #render :partial => "projects/project", :locals => { :project => @project }
+
       else
         format.html { render action: "new" }
         format.json { render json: @project.errors, status: :unprocessable_entity }

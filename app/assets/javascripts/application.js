@@ -16,3 +16,4 @@
 //= require colorbox-rails
 
 //= require jquery-fileupload/basic
+

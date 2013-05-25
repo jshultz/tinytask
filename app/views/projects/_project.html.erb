@@ -1,0 +1,16 @@
+<section class="project">
+
+  <p class="name"><span>Name: </span> <%= project.name %></p>
+  <p class="title"><span>Title: </span><%= project.title %></p>
+  <p class="title"><span>User ID: </span><%= project.user_id %></p>
+  <article>
+    <span>Details:</span> <%= project.details %>
+  </article>
+  <article>
+    <p>Meta:</p>
+    <%= link_to 'Show', project %>
+    <%= link_to 'Edit', edit_project_path(project), :data => { :colorbox => true,:colorbox_height => '500px', :colorbox_width => '500px', :colorbox_iframe => true } %>
+    <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </article>
+
+</section>

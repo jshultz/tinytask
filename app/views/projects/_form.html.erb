@@ -15,15 +15,16 @@
 
   <div class="field">
     <%= project_form.label :name %><br />
-    <%= project_form.text_field :name %>
+    <%= best_in_place @project, :name, :type => :input %>
+
   </div>
   <div class="field">
     <%= project_form.label :title %><br />
-    <%= project_form.text_field :title %>
+    <%= best_in_place @project, :title, :type => :input %>
   </div>
   <div class="field">
     <%= project_form.label :details %><br />
-    <%= project_form.text_area :details %>
+    <%= best_in_place @project, :details, :type => :input %>
   </div>
     <h2>Tabs</h2>
     <%= render :partial => 'tags/form',

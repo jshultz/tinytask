@@ -15,4 +15,6 @@
 //= require_tree
 //= require colorbox-rails
 //= require jquery-fileupload/basic
+//= require jquery-ui
+//= require best_in_place
 

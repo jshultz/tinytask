@@ -1,0 +1,34 @@
+<% @project.tags.build %>
+<%= form_for(@project, :remote => true) do |project_form| %>
+    <%= hidden_field_tag :user_id, current_user.id %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= project_form.label :name %><br />
+    <%= best_in_place @project, :name, :type => :input %>
+  </div>
+  <div class="field">
+    <%= project_form.label :title %><br />
+    <%= best_in_place @project, :title, :type => :input %>
+  </div>
+  <div class="field">
+    <%= project_form.label :details %><br />
+    <%= best_in_place @project, :details, :type => :textarea %>
+  </div>
+    <h2>Tabs</h2>
+    <%= render :partial => 'tags/form',
+               :locals => {:form => project_form} %>
+  <div class="actions">
+    <%= project_form.submit %>
+  </div>
+<% end %>

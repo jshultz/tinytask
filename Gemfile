@@ -35,7 +35,11 @@ gem 'jquery-rails'
 # Adding security to application with devise
 gem 'devise'
 
+<<<<<<< HEAD
 # Adding Best in Place Editor
+=======
+# Adding Best in Place
+>>>>>>> 7929733... best in place working
 gem "best_in_place"
 
 # To use ActiveModel has_secure_password

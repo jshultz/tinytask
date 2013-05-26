@@ -8,8 +8,7 @@
   </article>
   <article>
     <p>Meta:</p>
-    <%= link_to 'Show', project %>
-    <%= link_to 'Edit', edit_project_path(project), :data => { :colorbox => true,:colorbox_height => '500px', :colorbox_width => '500px', :colorbox_iframe => true } %>
+    <%= link_to 'Show / Edit', edit_project_path(project), :data => {  } %>
     <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
   </article>
 

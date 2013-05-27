@@ -16,4 +16,5 @@
 //= require colorbox-rails
 //= require jquery-fileupload/basic
 //= require best_in_place
+//= require masonry/jquery.masonry
 

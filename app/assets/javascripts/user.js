@@ -29,3 +29,12 @@ $(document).ready(function() {
     /* Activating Best In Place */
     jQuery(".best_in_place").best_in_place();
 });
+
+$('#projects').masonry({
+    itemSelector: '.project',
+    isAnimated: !Modernizr.csstransitions,
+// set columnWidth a fraction of the container width
+    columnWidth: function( containerWidth ) {
+        return containerWidth / 5;
+    }
+});

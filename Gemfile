@@ -38,6 +38,9 @@ gem 'devise'
 # Adding Best in Place
 gem "best_in_place"
 
+# Adding Masonry
+gem "masonry-rails", "~> 0.2.0"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

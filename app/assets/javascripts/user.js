@@ -33,8 +33,5 @@ $(document).ready(function() {
 $('#projects').masonry({
     itemSelector: '.project',
     isAnimated: !Modernizr.csstransitions,
-// set columnWidth a fraction of the container width
-    columnWidth: function( containerWidth ) {
-        return containerWidth / 5;
-    }
+    columnWidth: 90
 });

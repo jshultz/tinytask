@@ -7,7 +7,7 @@ body {
   overflow-y: scroll;
 }
 
-#container {
+#projects {
   background: #FFF;
   padding: 5px;
   margin-bottom: 20px;
@@ -18,7 +18,7 @@ body {
           border-radius: 5px;
 }
 
-.box {
+.project {
   margin: 5px;
   padding: 5px;
   background: #D8D5D2;
@@ -30,12 +30,12 @@ body {
           border-radius: 5px;
 }
 
-.box h2 {
+.project h2 {
   font-size: 14px;
   font-weight: 200;
 }
 
-.box img {
+.project img {
   display: block;
   width: 100%;
 }

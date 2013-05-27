@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree
  *= require colorbox-rails
- *= require 'masonry/fluid'
+ *= require 'masonry/basic'
  *= require 'masonry/transitions'
+ *= require 'mobile.css'
  */

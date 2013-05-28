@@ -22,6 +22,9 @@
   padding: .1m;
   cursor: hand;
   cursor: pointer;
+  -moz-transition: background 0.5s linear;
+  -o-transition: background 0.5s linear;
+  -webkit-transition: background 0.5s linear;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -29,6 +32,7 @@
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
+
 .best_in_place:hover, #user_account .do_hover {
   padding-right: 1.5em;
   background: url(/assets/red_pen.png) no-repeat right;

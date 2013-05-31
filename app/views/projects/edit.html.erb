@@ -1,9 +1,11 @@
-<h1>Editing project</h1>
+<div class="project">
+  <h1>Editing project</h1>
 
-<%= render 'form_edit' %>
+  <%= render 'form_edit' %>
 
-<h2>Add a task:</h2>
-<%= render "tasks/form" %>
+  <h2>Add a task:</h2>
+  <%= render "tasks/form" %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+  <%= link_to 'Show', @project %> |
+  <%= link_to 'Back', projects_path %>
+</div>
